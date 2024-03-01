@@ -16,6 +16,7 @@ public class Shooter extends SubsystemBase {
   private final Joystick controller;
   private double shooterSpeed;
   private double pivotShooterSpeed;
+  private double topWheelSpeed;
 
   double motorPosition = 180; // integer between 0-360
   double rate;
@@ -30,7 +31,7 @@ public class Shooter extends SubsystemBase {
     pivotEncoder = shooterPivot.getEncoder();
     shooterSpeed = 0.0;
     pivotShooterSpeed = 0.0;
-
+    topWheelSpeed = 0.0;
     // rate = pivotEncoder.getRate();
 
     // this.setDefaultCommand(new ShooterCommand(this, pivotEncoder));
@@ -100,5 +101,13 @@ public class Shooter extends SubsystemBase {
 
   public void setpivotShooterSpeed(double p) {
     this.pivotShooterSpeed = p;
+  }
+
+  public double gettopWheelSpeed(){
+    return this.topWheelSpeed;
+  }
+
+  public void settopWheelSpeed(double t){
+    this.topWheelSpeed = t;
   }
 }

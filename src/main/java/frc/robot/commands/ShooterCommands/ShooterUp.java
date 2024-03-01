@@ -15,13 +15,11 @@ public class ShooterUp extends Command {
 
   private static int countRan = 0;
 
-  private final CANSparkMax m;
   private final Shooter s;
 
   /** Creates a new ShooterUp. */
   public ShooterUp(Shooter s) {
     this.s = s;
-    this.m = s.getshooterPivot();
     addRequirements(s);
     // Use addRequirements() here to declare subsystem dependencies.
   }

@@ -170,9 +170,9 @@ public class RobotContainer {
     drive.setDefaultCommand(
         DriveCommands.joystickDrive(
             drive,
-            () -> -controller.getRawAxis(0)  ,
-            () -> -controller.getRawAxis(1)  ,
-            () -> -controller.getRawAxis(4)  ));
+            () -> -controller.getRawAxis(0),
+            () -> -controller.getRawAxis(1),
+            () -> -controller.getRawAxis(4)));
 
     // controller.square().onTrue(Commands.runOnce(drive::stopWithsquare, drive));
     // controller // uhhhhh
@@ -185,7 +185,7 @@ public class RobotContainer {
     //                 drive)
     //             .ignoringDisable(true)); // uhhhhh
 
-    SmartDashboard.putString("do you see me", "yes");
+    //SmartDashboard.putString("do you see me", "yes");
 
     x = new JoystickButton(controller, 3);
     x.onTrue(new Storage(intakeSubsystem, shooterSubsystem));
@@ -194,6 +194,12 @@ public class RobotContainer {
     rb = new JoystickButton(controller, 6);
     rb.onTrue(new BottomMotors(shooterSubsystem));
     rb.onFalse(new StopBottomMotors(shooterSubsystem));
+
+    //^^ DO NOT TOUCH. THEY WORK PLEASEEE
+
+    //some button for top wheels command here
+
+
     // b.toggleOnTrue(new MoveIntake(intakeSubsystem));
 
     // unfolding: shooter up first before intake out

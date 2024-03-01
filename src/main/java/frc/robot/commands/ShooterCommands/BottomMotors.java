@@ -34,28 +34,13 @@ public class BottomMotors extends Command {
   @Override
   public void initialize() {
     SmartDashboard.putString("bottom motors", "starting");
-
-    //  if (j.getRawButtonPressed(4)) {
-    //   // shooter angle too king
-    //   l.set(-speed);
-    //   r.set(speed);
-    // } else {
-    //   // l.setIdleMode(IdleMode.kBrake);
-    //   // r.setIdleMode(IdleMode.kBrake);
-    // }
-
-    // if (j.getRawButtonPressed(6)) {
-    // b.set(speed);
-    // } else {
-    // b.setIdleMode(IdleMode.kBrake);
-    // }
   }
 
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() {
     SmartDashboard.putString("bottom motors", "executing");
-    SmartDashboard.putString("can u see me team", "executing");
+    //SmartDashboard.putString("can u see me team", "executing");
     s.setshooterSpeed(-0.5);
   }
 

@@ -34,7 +34,7 @@ public class StopBottomMotors extends Command {
   @Override
   public void execute() {
     SmartDashboard.putString(" stopping bottom motors", "executing");
-    SmartDashboard.putString("can u see me team2", "executing");
+    //SmartDashboard.putString("can u see me team2", "executing");
     s.setshooterSpeed(0.0);
   }
 

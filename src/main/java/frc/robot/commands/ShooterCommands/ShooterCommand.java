@@ -36,11 +36,16 @@ public class ShooterCommand extends Command {
 
     SmartDashboard.putNumber("pivot shooter speed", this.s.getpivotShooterSpeed());
 
+    //for BottomMotors
     s.getbottomShooterMotor().set(s.getshooterSpeed());
 
+    //for ShooterUp
     s.getshooterPivot().set(s.getpivotShooterSpeed());
-
     s.getshooterPivot().setIdleMode(IdleMode.kCoast);
+
+    //for TopWheels
+    s.getleftShooterMotor().set(s.gettopWheelSpeed());
+    s.getrightShooterMotor().set(s.gettopWheelSpeed());
 
     // SmartDashboard.putNumber("Encoder Position ", e.getPositionConversionFactor());
 
